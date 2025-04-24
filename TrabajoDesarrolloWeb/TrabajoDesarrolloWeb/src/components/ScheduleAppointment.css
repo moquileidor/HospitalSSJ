@@ -1,0 +1,83 @@
+.schedule-appointment-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 200px);
+}
+
+.schedule-appointment-container h2 {
+  color: #298eff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.schedule-appointment-container p {
+  color: #64748B;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.schedule-appointment-container form {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1B2559;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #298eff;
+}
+
+.btn-primary {
+  background-color: #298eff;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .schedule-appointment-container {
+    padding: 2rem 1rem;
+  }
+  
+  .schedule-appointment-container h2 {
+    font-size: 2rem;
+  }
+  
+  .schedule-appointment-container form {
+    padding: 1.5rem;
+  }
+} 

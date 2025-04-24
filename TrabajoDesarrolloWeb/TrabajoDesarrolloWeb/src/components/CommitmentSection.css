@@ -1,0 +1,47 @@
+.commitment-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heart-icon {
+  margin-bottom: 2rem;
+}
+
+.heart-icon img {
+  width: 60px;
+  height: 60px;
+  color: #298eff;
+}
+
+.commitment-section h1 {
+  font-size: 3rem;
+  color: #1B2559;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.commitment-section p {
+  font-size: 1.1rem;
+  color: #64748B;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.info-button {
+  background-color: #298eff;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+  background-color: #007bff;
+} 

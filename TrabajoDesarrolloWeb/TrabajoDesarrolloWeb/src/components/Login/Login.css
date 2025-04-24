@@ -1,0 +1,27 @@
+.login-container {
+    background-image: url('/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* para que ocupe toda la altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    color: #343a40;
+    text-align: center;
+  }
+  
