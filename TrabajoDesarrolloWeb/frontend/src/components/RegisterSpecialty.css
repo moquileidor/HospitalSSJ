@@ -1,0 +1,13 @@
+.register-specialty-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    min-height: calc(100vh - 200px);
+}
+
+.register-specialty-container h2 {
+    color: #298eff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}

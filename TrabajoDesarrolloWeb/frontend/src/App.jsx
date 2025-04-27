@@ -13,6 +13,8 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import MoreInfo from "./components/MoreInfo";
 import ScheduleAppointment from "./components/ScheduleAppointment";
+import RegisterSpecialty from "./components/RegisterSpecialty";
+import AdminPanel from "./components/AdminPanel";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/more-info" element={<MoreInfo />} />
         <Route path="/schedule-appointment" element={<ScheduleAppointment />} />
+        <Route path="/register-specialty" element={<RegisterSpecialty />} />
+        <Route path="/admin" element={<AdminPanel />} />
       </Routes>
       <Footer />
     </Router>
