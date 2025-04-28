@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import './registerSpecialty.css';
+import './RegisterSpecialty.css';
 
 const RegisterSpecialty = ({ especialidades, setEspecialidades }) => {
   const [nombre, setNombre] = useState('')
