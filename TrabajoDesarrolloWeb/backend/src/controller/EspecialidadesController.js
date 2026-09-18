@@ -1,7 +1,26 @@
+/**
+ * Controlador de Especialidades Médicas
+ * Este archivo contiene todas las funciones necesarias para manejar las operaciones
+ * relacionadas con las especialidades médicas en el sistema, incluyendo la creación,
+ * lectura, actualización y eliminación de especialidades.
+ * 
+ * Funcionalidades:
+ * - Obtener todas las especialidades
+ * - Obtener especialidad por ID
+ * - Insertar nueva especialidad
+ * - Editar especialidad existente
+ * - Eliminar especialidad
+ */
+
 import {getAllEspecialidades, getEspecialidadById, insertEspecialidad, editEspecialidadById, deleteEspecialidadById } from '../model/EspecialidadesModel.js'
 
+/**
+ * Obtiene todas las especialidades médicas registradas en el sistema
+ * @param {Object} req - Objeto de solicitud de Express
+ * @param {Object} res - Objeto de respuesta de Express
+ * @returns {Object} Lista de especialidades médicas
+ */
 const getAllE = async (req, res) => {
-
     try {
         const especialidades = await getAllEspecialidades()
         res.json(especialidades)
@@ -10,6 +29,14 @@ const getAllE = async (req, res) => {
     }
 }
 
+/**
+ * Inserta una nueva especialidad médica en el sistema
+ * @param {Object} req - Objeto de solicitud de Express
+ * @param {Object} req.body - Datos de la especialidad a insertar
+ * @param {string} req.body.nombre - Nombre de la especialidad médica
+ * @param {Object} res - Objeto de respuesta de Express
+ * @returns {Object} Datos de la especialidad creada
+ */
 const insertE = async (req, res) => {
     try {
         const { nombre } = req.body
@@ -31,7 +58,14 @@ const insertE = async (req, res) => {
     }
 }
 
-
+/**
+ * Obtiene una especialidad médica específica por su ID
+ * @param {Object} req - Objeto de solicitud de Express
+ * @param {Object} req.params - Parámetros de la URL
+ * @param {string} req.params.id - ID de la especialidad a buscar
+ * @param {Object} res - Objeto de respuesta de Express
+ * @returns {Object} Datos de la especialidad encontrada
+ */
 const getEById = async (req, res) => {
     try {
         const id = req.params.id
@@ -58,7 +92,16 @@ const getEById = async (req, res) => {
     }
 }
 
-
+/**
+ * Actualiza una especialidad médica existente
+ * @param {Object} req - Objeto de solicitud de Express
+ * @param {Object} req.params - Parámetros de la URL
+ * @param {string} req.params.id - ID de la especialidad a actualizar
+ * @param {Object} req.body - Nuevos datos de la especialidad
+ * @param {string} req.body.nombre - Nuevo nombre de la especialidad
+ * @param {Object} res - Objeto de respuesta de Express
+ * @returns {Object} Datos de la especialidad actualizada
+ */
 const updateE = async (req, res) => {
     try {
         const id = req.params.id
@@ -89,7 +132,14 @@ const updateE = async (req, res) => {
     }
 }
 
-
+/**
+ * Elimina una especialidad médica del sistema
+ * @param {Object} req - Objeto de solicitud de Express
+ * @param {Object} req.params - Parámetros de la URL
+ * @param {string} req.params.id - ID de la especialidad a eliminar
+ * @param {Object} res - Objeto de respuesta de Express
+ * @returns {Object} Confirmación de eliminación
+ */
 const deleteE = async (req, res) => {
     try {
         const id = req.params.id
@@ -113,13 +163,9 @@ const deleteE = async (req, res) => {
         } else {
             return res.status(500).json({ message: 'No se pudo eliminar la especialidad' })
         }
-
-            
-    }  catch (error) {
+    } catch (error) {
         res.status(500).json({ message: 'Error al eliminar la especialidad', error: error.message })
-    } 
-
+    }
 }
-
 
 export {getAllE, insertE, getEById, updateE, deleteE}

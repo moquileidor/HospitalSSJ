@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: hospital-ssj-backend
+    env: node
+    buildCommand: cd TrabajoDesarrolloWeb/backend && npm install
+    startCommand: cd TrabajoDesarrolloWeb/backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_SERVER
+        sync: false
+      - key: DB_NAME
+        sync: false 

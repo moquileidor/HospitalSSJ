@@ -1,29 +1,29 @@
 .admin-panel-container {
-  padding: 2rem 0;
-  min-height: calc(100vh - 200px);
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f8f9fa;
 }
 
 .admin-title {
-  color: #298eff;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
   text-align: center;
+  font-weight: bold;
 }
 
 .admin-section {
-  background-color: #f8f9fa;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 
 .admin-section h3 {
-  color: #1B2559;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #298eff;
-  padding-bottom: 0.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e9ecef;
 }
 
 .admin-section h4 {
@@ -34,60 +34,335 @@
 
 .admin-actions {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .admin-action-btn {
-  background-color: #298eff;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-  text-align: center;
   flex: 1;
-  min-width: 120px;
+  min-width: 150px;
+  padding: 12px 20px;
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  border: none;
+  font-weight: 500;
 }
 
 .admin-action-btn:hover {
-  background-color: #007bff;
+  background-color: #0056b3;
   color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .admin-action-section {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: white;
+  background: #f8f9fa;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
 }
 
+.admin-action-section h4 {
+  color: #343a40;
+  margin-bottom: 15px;
+}
+
+/* Estilos para la tabla */
+.table-responsive {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow-x: hidden;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* Ajustes de columnas para la tabla de citas */
+.table th:nth-child(1), 
+.table td:nth-child(1) {
+  width: 50px; /* ID */
+}
+
+.table th:nth-child(2), 
+.table td:nth-child(2) {
+  width: 150px; /* Fecha y Hora */
+}
+
+.table th:nth-child(3), 
+.table td:nth-child(3) {
+  width: 200px; /* Paciente */
+}
+
+.table th:nth-child(4), 
+.table td:nth-child(4) {
+  width: 150px; /* Médico */
+}
+
+.table th:nth-child(5), 
+.table td:nth-child(5) {
+  width: 150px; /* Especialidad */
+}
+
+.table th:nth-child(6), 
+.table td:nth-child(6) {
+  width: 120px; /* Estado */
+}
+
+.table th:nth-child(7), 
+.table td:nth-child(7) {
+  width: 200px; /* Último Cambio */
+}
+
+.table th:nth-child(8), 
+.table td:nth-child(8) {
+  width: 150px; /* Notas */
+}
+
+/* Estilos para el texto en las celdas */
+.table td {
+  white-space: normal;
+  vertical-align: middle;
+  font-size: 0.875rem;
+}
+
+.table td small {
+  display: block;
+  color: #6c757d;
+  font-size: 0.75rem;
+}
+
+/* Estilos para los botones de acción en la tabla */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.dropdown-toggle {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.813rem;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 100px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  z-index: 1000;
+  right: 0;
+}
+
+.action-buttons:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: 0.813rem;
+  color: #212529;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-item i {
+  font-size: 0.813rem;
+}
+
+/* Colores específicos para los íconos/texto en el dropdown */
+.dropdown-item.editar {
+  color: #007bff;
+}
+
+.dropdown-item.guardar-rol {
+  color: #28a745;
+}
+
+.dropdown-item.eliminar {
+  color: #dc3545;
+}
+
+/* Estilos para los filtros */
+.filter-section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.filter-item {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Estilos para los badges */
+.badge {
+  padding: 6px 12px;
+  font-weight: 500;
+  font-size: 0.813rem;
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Estilos para los formularios */
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.form-select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+/* Estilos para las pestañas */
 .nav-pills .nav-link {
-  color: #1B2559;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
+  color: #495057;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  margin-bottom: 5px;
   transition: all 0.3s ease;
 }
 
 .nav-pills .nav-link.active {
-  background-color: #298eff;
+  background-color: #007bff;
   color: white;
+  border-color: #007bff;
 }
 
 .nav-pills .nav-link:hover:not(.active) {
   background-color: #e9ecef;
+  border-color: #dee2e6;
 }
 
+/* Estilos responsivos */
 @media (max-width: 768px) {
-  .admin-actions {
-    flex-direction: column;
+  .action-buttons {
+    flex-wrap: wrap;
   }
   
-  .admin-action-btn {
-    width: 100%;
+  .action-button {
+    flex: 1;
   }
+
+  .table td:last-child {
+    min-width: 100px;
+    max-width: none;
+  }
+}
+
+/* Estilos para el modal de confirmación */
+.modal-content {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 8px 8px 0 0;
+  padding: 1rem 1.5rem;
+}
+
+.modal-header .modal-title {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  padding: 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Estilos específicos para los botones del modal */
+.modal-btn {
+  width: 200px !important;
+  height: 40px !important;
+  font-size: 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-danger.modal-btn {
+  background-color: #dc3545 !important;
+}
+
+.btn-danger.modal-btn:hover {
+  background-color: #c82333 !important;
+}
+
+.btn-secondary.modal-btn {
+  background-color: #6c757d !important;
+}
+
+.btn-secondary.modal-btn:hover {
+  background-color: #5a6268 !important;
+}
+
+.alert {
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.alert-info {
+  background-color: #e3f2fd;
+  border: 1px solid #bbdefb;
+  color: #0d47a1;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.form-control::placeholder {
+  color: #adb5bd;
 } 

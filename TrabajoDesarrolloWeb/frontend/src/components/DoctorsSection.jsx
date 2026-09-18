@@ -20,12 +20,18 @@ const DoctorsSection = () => {
       specialty: 'NEUROCIRUJANO',
       description: 'El Dr. Alvarado cuenta con más de 15 años de experiencia en el área de neuroregeneración.',
       image: 'https://img.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg'
+    },
+    {
+      name: 'Salomon Giraldo',
+      specialty: 'Proctologo',
+      description: 'El Dr. Giraldo es un especialista en proctología con amplia experiencia en el tratamiento de enfermedades anales.',
+      image: 'https://img.freepik.com/free-photo/portrait-smiling-male-doctor_171337-1532.jpg'
     }
   ];
 
   return (
     <section className="doctors-section">
-      <h2>Conoce a nuestros médicos</h2>
+      <h2>Conoce a nuestros médicos fundadores</h2>
       <div className="doctors-grid">
         {doctors.map((doctor, index) => (
           <div key={index} className="doctor-card">

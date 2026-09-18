@@ -1,3 +1,16 @@
+/**
+ * Componente CommitmentSection
+ * Este componente muestra una sección de compromiso institucional del hospital.
+ * Presenta un mensaje de confianza y calidad del servicio médico,
+ * acompañado de un ícono visual y un botón para más información.
+ * 
+ * Características:
+ * - Ícono visual representativo
+ * - Mensaje de compromiso institucional
+ * - Botón de llamada a la acción para más información
+ * 
+ * @returns {React.ReactNode} - Sección de compromiso institucional
+ */
 import React from 'react';
 import './CommitmentSection.css';
 import { Link } from 'react-router-dom';

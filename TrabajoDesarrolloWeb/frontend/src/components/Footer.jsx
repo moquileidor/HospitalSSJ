@@ -1,3 +1,16 @@
+/**
+ * Componente Footer
+ * Este componente representa el pie de página de la aplicación.
+ * Muestra información de contacto y enlaces importantes del hospital.
+ * 
+ * Características:
+ * - Logo del hospital
+ * - Botón de llamada a la acción para agendar citas
+ * - Información de contacto (dirección, email, teléfono)
+ * - Enlaces a secciones importantes
+ * 
+ * @returns {React.ReactNode} - Pie de página de la aplicación
+ */
 import React from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
@@ -9,7 +22,7 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="logo">
             <img 
-              src="https://cdn-icons-png.flaticon.com/512/4320/4320371.png" 
+              src="/LogoSSJ.jpg" 
               alt="Hospital SSJ Logo" 
               className="footer-icon" 
             />
@@ -24,17 +37,17 @@ const Footer = () => {
           <div className="contact-info">
             <div className="contact-item">
               <h4>Dirección</h4>
-              <p>Calle 123, Poblado, Medellín Antioquia, CP 12345</p>
+              <p>Calle 45, Poblado, Medellín Antioquia</p>
             </div>
             
             <div className="contact-item">
               <h4>Correo electrónico</h4>
-              <p>hola@sitioincreible.com</p>
+              <p>contacto@hospitalssj.com</p>
             </div>
             
             <div className="contact-item">
               <h4>Teléfono</h4>
-              <p>(57) 1234 5678</p>
+              <p>(+57) 123 456 78</p>
             </div>
           </div>
         </div>

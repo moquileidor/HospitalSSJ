@@ -1,3 +1,16 @@
+/**
+ * Componente MoreInfo
+ * Este componente muestra una página de información adicional sobre el hospital.
+ * Presenta contenido informativo sobre recursos y artículos de salud disponibles
+ * para los pacientes.
+ * 
+ * Características:
+ * - Título de la sección
+ * - Descripción de los recursos disponibles
+ * - Información sobre el blog del hospital
+ * 
+ * @returns {React.ReactNode} - Página de información adicional
+ */
 import React from 'react';
 import './MoreInfo.css';
 

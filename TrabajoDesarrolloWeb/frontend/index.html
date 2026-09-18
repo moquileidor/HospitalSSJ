@@ -1,13 +1,32 @@
 <!doctype html>
+<!-- 
+  Este es el archivo principal HTML de la aplicación.
+  Sirve como punto de entrada para toda la aplicación web.
+  Aquí se configura la estructura básica y se cargan los recursos necesarios.
+-->
 <html lang="en">
   <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Favicon de la aplicación (el ícono que aparece en la pestaña del navegador) -->
+    <link rel="icon" type="image/jpeg" href="/LogoSSJ.jpg" />
+    <!-- Configuración para hacer la página responsive (adaptable a diferentes dispositivos) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Hospital SSJ</title>
+    <!-- Carga de Font Awesome para usar íconos en la aplicación -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
   <body>
+    <!-- 
+      Este div con id "root" es donde se montará toda la aplicación React.
+      Es el contenedor principal donde se renderizará todo el contenido dinámico.
+    -->
     <div id="root"></div>
+    <!-- 
+      Carga el archivo principal de JavaScript que inicia la aplicación.
+      El atributo type="module" permite usar la sintaxis moderna de JavaScript.
+    -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
