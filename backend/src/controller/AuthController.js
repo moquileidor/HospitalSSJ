@@ -20,7 +20,11 @@ import dotenv from "dotenv";
 dotenv.config();
 
 // Clave secreta para firmar los tokens JWT
-const JWT_SECRET = process.env.JWT_SECRET || '51f3afaaca6fc6865f8e537a14b77a1ca23016fd65a87e22eea1746cb9617287';
+const JWT_SECRET = process.env.JWT_SECRET;
+
+if ( !JWT_SECRET) {
+    throw new Error("No existe token");
+}
 
 /**
  * Registra un nuevo usuario en el sistema
@@ -98,22 +102,7 @@ const login = async (req, res) => {
 
         console.log('Comparando contraseña para usuario:', usuario.email, 'con rol:', usuario.rol);
         
-        // Intentar comparar con bcrypt (para contraseñas hasheadas)
-        let validPassword = false;
-        try {
-            validPassword = await bcrypt.compare(contrasena, usuario.contrasena);
-        } catch (error) {
-            // Si bcrypt falla, es probable que la contraseña no esté hasheada
-            console.log('bcrypt.compare falló, intentando comparación directa');
-            validPassword = false;
-        }
-        
-        // Si bcrypt falló, comparar directamente (para contraseñas en texto plano)
-        if (!validPassword) {
-            validPassword = contrasena === usuario.contrasena;
-        }
-        
-        console.log('Resultado de comparación de contraseña:', validPassword);
+        const validPassword = await bcrypt.compare(contrasena, usuario.contrasena);
         
         if (!validPassword) {
             return res.status(400).json({ message: 'Credenciales inválidas' });

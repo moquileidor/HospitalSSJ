@@ -9,11 +9,13 @@ services:
         value: production
       - key: PORT
         value: 3000
-      - key: DB_USER
+      - key: USER
         sync: false
-      - key: DB_PASSWORD
+      - key: PASSWORD
         sync: false
-      - key: DB_SERVER
+      - key: SERVER
         sync: false
-      - key: DB_NAME
+      - key: DATABASE
         sync: false 
+      - key: JWT_SECRET
+        sync: false

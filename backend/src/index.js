@@ -18,7 +18,7 @@ import {getConnection} from './config/Connection.js'
 import router from './routes/EspecialidadesRoute.js';
 import routerM from './routes/MedicosRoute.js';
 import routerU from './routes/UsuariosRoute.js'
-import routerA from './routes/authRoutes.js';
+import routerA from './routes/AuthRoutes.js';
 import routerCitas from './routes/CitasRoute.js';
 import routerDatosPersonales from './routes/datosPersonales.routes.js';
 

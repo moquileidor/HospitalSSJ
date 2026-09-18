@@ -38,7 +38,6 @@ const getAllUsuarios = async () => {
  * @param {string} usuario.email - Email del usuario
  * @param {string} usuario.contrasena - Contraseña del usuario
  * @param {string} [usuario.rol='PACIENTE'] - Rol del usuario (PACIENTE por defecto)
- * @param {boolean} [usuario.hashPassword=false] - Si es true, hashea la contraseña antes de guardar
  * @returns {Promise<Object>} Usuario creado con su ID
  * @throws {Error} Si el email ya existe
  */
@@ -58,13 +57,8 @@ const insertUsuario = async (usuario) => {
             }
         }
 
-        // Por defecto NO hasheamos la contraseña (requisito del proyecto universitario)
-        // Solo hasheamos si explícitamente se pide con hashPassword: true
-        let passwordToStore = usuario.contrasena;
-        if (usuario.hashPassword === true) {
-            const saltRounds = 10;
-            passwordToStore = await bcrypt.hash(usuario.contrasena, saltRounds);
-        }
+        const saltRounds = 10;
+        const passwordToStore = await bcrypt.hash(usuario.contrasena, saltRounds);
         
         const rol = (usuario.rol || 'PACIENTE').toUpperCase();
         if (!VALID_ROLES.includes(rol)) {
