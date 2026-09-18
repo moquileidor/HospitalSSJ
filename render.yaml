@@ -2,8 +2,8 @@ services:
   - type: web
     name: hospital-ssj-backend
     env: node
-    buildCommand: cd TrabajoDesarrolloWeb/backend && npm install
-    startCommand: cd TrabajoDesarrolloWeb/backend && npm start
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
     envVars:
       - key: NODE_ENV
         value: production
