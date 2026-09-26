@@ -62,7 +62,7 @@ const insertU = async (req, res) => {
 
         res.status(201).json({
             message: 'Usuario creado correctamente',
-            id: resultado.id,
+            id: resultado.id_usuario,
             usuario: nuevoUsuario
         })
     } catch (error) {
